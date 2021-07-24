@@ -1,0 +1,98 @@
+
+
+
+\begin{figure}[ht]
+  \caption{Share of individuals in Industries at age 35 by Generation}\label{fig:ind_share} 
+  \includegraphics[width=\linewidth]{share_bygenerationgender_age35.pdf}
+  \subcaption*{\emph{Source:} ASEC supplement of the Current Population Survey (CPS), survey years 1962-2018 \\
+  %\emph{Notes:} 
+  }
+  \end{figure}
+
+\section{Labour Share: Aggregates}
+
+Figure~\ref{fig:lb_generations} plots the labour share over the life cycle by generation for each of the one-digit NAICS codes. Looking at the data it is clear that the Boomers have experienced consistently higher labour shares at each age than any other generation. This is an interesting contrast to the previous results for income which had the Silent Generation earning more. One explanation, discussed in detail by \cite{Guvenen2017}, is that this could reflect changes in non-pay costs such as health insurance. It could also reflect changes in the number of hours worked although the results in Appendix~\ref{sec:apphours} suggests that any changes have been too small to account for all of the change. Equally, it might reflect changes in the denominator and thus changes in the average, and distribution of, firms' value-added as argued by \cite{autoretal:2020}. 
+
+
+Also interesting is the variation across industries, not only does the life cycle average vary considerably across industries, but the trajectories over the life cycle are also quite different.  In some industries, such as Services, Finance, or Utilities and Transportation, there seems to be an initial upswing in the labour share, perhaps reflecting increased bargaining power as specific skills are obtained and labour markets become thinner. Whereas, in the Retail Trade or Manufacturing, the labour share consistently drops over the life cycle. 
+
+Figure~\ref{fig:lb_GENDER} reports results now pooling across industries but disaggregating by gender. To obtain these disaggregated labour shares we replace the weights in (\ref{eq:LabourShare}), $w_{g,i}^{s,t}$, with gender specific alternatives $wM_{g,i}^{s,t}= \frac{m^{s,t}_{g,i}}{M^{s,t}_{i}}$ and $wF_{g,i}^{s,t}=\frac{f^{s,t}_{g,i}}{F^{s,t}_{i}}$. 
+Where $M$ is the total number of male workers and F is the total number of female workers, and the number of male and female workers in industry $i$ who belong to generation $g$ is denoted $m_{g,i}$ and $f_{g,i}$ respectively. The adding up constraints for the weights are now: $\sum_{g} wF_{g,i}^{s,t}=\sum_{g} wM_{g,i}^{s,t}=1$. The implicit assumption is that the labour share of women in a given state, industry, and year is the same as that of men in the same state, industry, and year. This assumption might be violated if women systematically occupy different roles within a given industry even controlling for state and year and the labour share of these roles is systematically different. In our regression analyses we will again condition on occupation such that the assumption is that two workers of the same gender in the same occupation in the same industry and state of different generations create similar value-added in their roles.   
+
+The results are perhaps surprising. The labour share of women is on average slightly higher than that of men. 
+While the initial labour shares of Boomer men and women are similar, women's rise before declining from age 40 onwards while men's decline immediately. 
+Similarly, Gen. X women start slightly higher and peak somewhat higher. 
+Likewise for Millennials. As expected, given the sector shares in Figure~\ref{fig:ind_share} and the steep declines in the labour share in Manufacturing and Services plotted in Figure~\ref{fig:lb_generations} the declines in the labour share of both Silent and Boomer Men and Women mirror the declines in those sectors. Similarly, it may be that the rapid increase in the labour share amongst Gen. X'ers and Millennials reflects the rise in the labour share in the Finance and Utility industries. 
+
+Of course, one explanation for these changes is that the average worker in sectors such as Finance has changed over time. Thus, increased earnings in Finance may reflect declining numbers of accounting clerks compared to investment bankers or financial advisers. We find statistically significant coefficients for all industries apart from Mining for Millennials.  Finance and Services are notable outliers, where conditional on individual characteristics, they earn $16.47\%$ and around $3.3\%$ more on average compared to the Silent Generation. Others Millennial workers earn between $11\%$ and $30\%$ less than counterpart Silent Generation workers controlling for age, gender, race and education. That finance seems to be an outlier, is consistent with the evidence of a substantial wage premium for those working in Finance, both in the US \citep{Philippon2012} and internationally \citep{Philippon2013}. This premium around $50\%$ for the US and they find can only be partly explained by increases in earnings risk. 
+
+% Figure 7
+
+\begin{table}\centering
+  \caption{Generational differences in labour share by industry}\label{tab:reg_ls_ind}
+  %\resizebox{\textwidth}{!}{
+  \scalebox{0.65}{
+    \begin{threeparttable}
+    \vspace{.75ex}
+     \begin{tabular}{>{\hspace{0pt}}p{3cm}*{9}{S[table-format=1.3,table-column-width=20mm]}}%{>{\hspace{0pt}}p{2.5cm}*{9}{S[table-format=2,table-column-width=20mm]}}%{S[table-format=1.3,table-column-width=15mm]}}
+     \toprule
+    %  \input{indreg_uncond_wagea.tex}
+    \multicolumn{9}{c}{\textbf{Panel A: Unconditional estimates}}\\
+      \input{indreg_uncond_labsharea_feb21.tex} \\
+     \midrule
+   \multicolumn{9}{c}{\textbf{Panel B: Including covariates}}\\
+   \input{indreg_cov_labsharea_feb21.tex} \\
+   \midrule
+    \multicolumn{9}{c}{\textbf{Panel C: Plus occupation controls}}\\
+    \input{indreg_covocc_labsharea_feb21} \\
+     \midrule
+    \multicolumn{9}{c}{\textbf{Panel D: With state fixed effects}}\\
+     \input{indreg_cov_labshare_fea_feb21.tex} \\
+  \bottomrule
+        \addlinespace[.15ex]
+  \end{tabular}
+  \Fignote{Each panel and column is a regression where the dependent variableis the labour share of value added as seen in Equation~(\ref{eq:wageregs}). Panel A is the regression without covariates and fixed effects. Panel B includes covariates but not fixed effects. Panel C includes additional occupation controls, and Panel D is the regression including both covariates and fixed effects. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. Covariates include age, education, gender and race variables. Fixed effects are by state and probability weights are used. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} \end{threeparttable}
+    }
+  \end{table}
+  
+  Table~\ref{tab:reg_ls_ind} reports estimates of Equation~(\ref{eq:wageregs}). Looking to Panel A, which omits controls and fixed effects, we see minimal changes in labour share for all generations for workers in Wholesale and Services relative to the Silent Generation.  Conversely, we see reductions in Retail, Manufacturing, Construction and Mining. Whereas similar to wages, Finance and Utilities are the exceptions showing increases in the labour share.  These results are consistent with and exhibit similar patterns to the results for wages above, suggesting that intergenerational declines in median wages may reflect declines in the labour share. 
+  
+  Controlling for observables has a limited impact on the results, as can be seen in  Panels B to D. The estimated $\gamma$ coefficients are now larger, with a similar pattern across industries as in the case without additional controls. Millennials continue to perform well in Finance and Utilities, with the Millennial labour shares  of those in both sectors substantially higher than those of previous generations. 
+  
+
+%Figure 8 
+
+\begin{figure}[ht]
+  \caption{Labour share by age for each industry and generation}\label{fig:lb_generations} 
+  \includegraphics[width=\linewidth]{LabourShareFigure.pdf}
+  \subcaption*{\emph{Source:} US Economics Census \& ASEC supplement of the Current Population Survey (CPS), data is every 5 years from $1977-2012$ \\
+  \emph{Notes:} Data is merged at the year, state and one-digit industry level as described in Appendix~\ref{sec:data_appendix}. The labour share is calculated as described in Section~\ref{sec:labsharemeasure}. Individual weights provided by the CPS are used.}
+  \end{figure}
+
+
+
+% \begin{figure}[ht]
+%   \caption{Labour share by age for each industry and generation}\label{fig:lb_generations} 
+%   \includegraphics[width=\linewidth]{labshare_lc_byindustry.pdf}
+%   \subcaption*{\emph{Source:} US Economics Census \& ASEC supplement of the Current Population Survey (CPS), data is every 5 years from $1977-2012$ \\
+%   \emph{Notes:} Data is merged at the year, state and one-digit industry level as described in Appendix~\ref{sec:data_appendix}. The labour share is calculated as described in Section~\ref{sec:labsharemeasure}. Individual weights provided by the CPS are used.}
+%   \end{figure}
+
+\begin{figure}[ht]
+  \caption{Labour share by age for MEN AND WOMEN}\label{fig:lb_GENDER} 
+  \includegraphics[width=\linewidth]{LabourShareFigure_Gender.pdf}
+  \subcaption*{\emph{Source:} US Economics Census \& ASEC supplement of the Current Population Survey (CPS), data is every 5 years from $1977-2012$ \\
+  \emph{Notes:} Data is merged at the year, state and one-digit industry level as described in Appendix~\ref{sec:data_appendix}. The labour share is calculated as described in Section~\ref{sec:labsharemeasure}, with the addition of weighting the labour share additionally by the gender composition of each generation in each industry. Individual weights provided by the CPS are used.}
+  \end{figure}
+  
+\section{Labour Share: Microdata}
+  \begin{figure}[ht]
+  \caption{Coefficients on Generation from regression of Gender weighted labour share}\label{fig:lb_gen_reg} 
+  \includegraphics[width=\linewidth]{GenderWeightedLabshare.pdf}
+  \subcaption*{\emph{Source:} US Economics Census \& ASEC supplement of the Current Population Survey (CPS), data is every 5 years from $1977-2012$ \\
+  \emph{Notes:} Data is merged at the year, state and one-digit industry level as described in Appendix~\ref{sec:data_appendix}. The labour share is calculated as described in Section~\ref{sec:labsharemeasure}, with the addition of weighting the labour share additionally by the gender composition of each generation in each industry. Individual weights provided by the CPS are used. \emph{Unconditional} refers to a regression with just generation covariates, \emph{plus individual covariates} contains additional individual controls and industry, and lastly, \emph{Saturated model} included additional state and occupation fixed effects. }
+  \end{figure}
+
+
+
+Figure reporting LS regression results (those in the new tables).

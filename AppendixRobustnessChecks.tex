@@ -1,0 +1,65 @@
+
+As a robustness check, we are able to reproduce the results of the regressions for real wage using the full CPS sample, rather than the restricted sample which allows us to merge the data to the Economic Census. For brevity, we include only the key variables of interest. 
+
+\begin{table}[h!]\centering
+\scalebox{0.65}{
+\begin{threeparttable}
+\caption{Wage regressions: Pooled estimates}
+\estauto{pooledreg_wage_fe_full_feb21.tex}{11}{c} 
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries, including  covariates and fixed effects.  The specification estimated is: $c^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}  +\delta_{s}  + \varepsilon^{i}_{j,t}$. Where $c^{i}_{j,t}$, the dependent variable, is the log wage. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted categories are the Silent Generation, retail industry and managerial professional speciality. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+%%%%%%%
+\begin{table}\centering
+\caption{Determinants of real wages by generation}
+%\resizebox{\textwidth}{!}{
+\scalebox{0.65}{
+  \begin{threeparttable}
+  \vspace{.75ex}
+   \begin{tabular}{>{\hspace{0pt}}p{3cm}*{9}{S[table-format=1.3,table-column-width=25mm]}}%{>{\hspace{0pt}}p{2.5cm}*{9}{S[table-format=2,table-column-width=20mm]}}%{S[table-format=1.3,table-column-width=15mm]}}
+   \toprule
+  %  \input{indreg_uncond_wagea.tex}
+  \multicolumn{9}{c}{\textbf{Panel A}}\\
+   \input{genreg_wagea_full_feb21.tex} \\
+   \midrule
+ \multicolumn{9}{c}{\textbf{Panel B}}\\
+\input{genreg_wage_fea_full_feb21.tex} \\
+\bottomrule
+      \addlinespace[.15ex]
+\end{tabular}
+\Fignote{Each panel and column is a regression where the dependent variable is Real Wage as seen in Equation~(\ref{eq:wageregs}) but pooling across industries and disaggregating instead by generation. The data is the full unmerged CPS including indvidual aged 23-55 who are not working in Government or self employed have income above the minimum income threshold. Panel A is the regression without fixed effects, Columns (1)-(4) do not include any additional controls, whilst Columns (5)-(8) include indusrty controls.  Panel B, Columns (1) to (4) include industry controls and additional occupation controls. Whilst Columns (5) to (8) include the full control with state fixed effects.  Generation is defined on the basis of date of birth, as per Table~\ref{cohortdef}. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.}    
+\end{threeparttable}
+  }
+\end{table}
+
+
+\begin{table}\centering
+\caption{Generational differences in real wages by industry}
+%\resizebox{\textwidth}{!}{
+\scalebox{0.65}{
+  \begin{threeparttable}
+  \vspace{.75ex}
+   \begin{tabular}{>{\hspace{0pt}}p{3cm}*{9}{S[table-format=1.3,table-column-width=20mm]}}%{>{\hspace{0pt}}p{2.5cm}*{9}{S[table-format=2,table-column-width=20mm]}}%{S[table-format=1.3,table-column-width=15mm]}}
+   \toprule
+  %  \input{indreg_uncond_wagea.tex}
+  \multicolumn{9}{c}{\textbf{Panel A: Unconditional estimates}}\\
+    \input{indreg_uncond_wagea_full_feb21.tex}\\
+   \midrule
+ \multicolumn{9}{c}{\textbf{Panel B: Including covariates}}\\
+ \input{indreg_cov_wagesa_full_feb21.tex}\\
+  \midrule
+  \multicolumn{9}{c}{\textbf{Panel C: plus occupation controls}}\\
+  \input{indreg_covocc_wagesa_full_feb21.tex}\\
+   \midrule
+   \multicolumn{9}{c}{\textbf{Panel D: Plus state fixed effects}}\\
+   \input{indreg_cov_wages_fea_full_feb21.tex}\\
+\bottomrule
+      \addlinespace[.15ex]
+\end{tabular}
+\Fignote{Each panel and column is a regression where the dependent variable is log wage as seen in Equation~(\ref{eq:wageregs}). Panel A is the regression without covariates and fixed effects. Panel B includes covariates but not fixed effects. Panel C includes additional occupation controls. Panel D is the full specification including all covariates and state fixed effects. The data from the CPS and BEA are merged at the state geographic level and 1 digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. Covariates include age, education, gender and race variables. Fixed effects are by state. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+  \end{threeparttable}
+  }
+\end{table}

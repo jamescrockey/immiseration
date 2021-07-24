@@ -1,0 +1,63 @@
+That we still observe an inter-generational decline in wages even controlling for differences in demographic characteristics, occupation, industry, and state implies that the labour share may have fallen. The alternative being that they have become less productive. For workers to have become less-productive requires either declines in TFP, declines in capital per worker, or a reduction in human-capital supplied. One possibility is that the hours worked by subsequent generations declined but the data do not support this possibility, as shown in Appendix~\ref{sec:apphours}  Note, that becoming less productive is distinct from the price of human-capital falling. 
+
+\cite{Bowlus2012} document a steady decline in the price of human capital since the mid-'70s. In their framework a given kind of human capital attracts a given rent at any given time. Moreover, they assume that labour is paid its marginal product. In their setting an inter-generational decline in the wages of high school graduates would reflect either a decline in the price paid per (efficiency)unit of human capital that was greater than any increase in the number of units supplied or vice-versa. This would, implausibly, imply that demand for human capital was price-elastic. And moreover, that this elasticity changed in the mid-`70s.  
+
+A prominent recent literature documents the decline in the labor share and offers explanations for it (\citealp{Karabarbounis2008,Elsby2013,Piketty2014,autoretal:2020,Grossman2018} and particularly \citealp{autoretal:2020}). Both theory and prior empirical evidence suggests that we should expect heterogeneity in this decline across sectors due both to the potential for automation and the adoption of computers \citep{Acemoglu2018,Autor2018a,Burstein2019} as well as the differential effects of offshoring and sector specific productivity trends \citep{Elsby2013,Grossman2018}.
+
+For this reason we construct generation-specific labour share series by industry, as well as by gender. We begin by outlining how these series are constructed before discussing the results. 
+
+\subsection{Calculating the labour share\label{sec:labsharemeasure}}
+
+We compute the labour share for each generation, in each year, and in each industry. We do this using a similar approach to that of \cite{autoretal:2020}. Like them we define the labour share of firm $k$, $\lambda_{k}$, as the ratio of annual payroll to the firm's total value added. 
+
+We define the labour share in industry $i$ as the size-weighted average $\lambda_i$, of for all firms $k$ in that industry using the data from the BEA. Linking this with data on demographic information by industry from the CPS means we can then compute the labour share of a given generation as the employment-weighted average of industry labour shares. We assign firms to industries on the basis of their one-digit NAICS codes. The details of how we merge the CPS data with the US Economic Census are in Appendix~\ref{sec:data_appendix}. More precisely, we compute the labour share of a given generation $g$ in a given industry $i$ in a given state $s$ in a given year $t$,  %We merge on a number of industry and geographic identifiers. 
+
+Then, from the CPS we know $w^{s,t}_{g,i}$, the share of a given generation working in industry $i$ in a given year and state. Having calculated the labour share in each industry in that year and state we then compute the labour share of a generation as the share-weighted average. That is, 
+\begin{equation}\label{eq:LabourShare}
+\lambda_g^{s,t} = \sum_{s} \sum_{i} \lambda_{i}^{s,t} \cdot w^{s,t}_{g,i}\, \quad\mbox{ such that }\hspace{0.3cm} w^{s,t}_{g,i} = \frac{n^{s,t}_{g,i}}{N^{s,t}_{i}} \mbox{ and } \sum_g w^{s,t}_{g,i} = 1
+\end{equation}
+
+Where the total number of workers in industry $i$ is denoted $N_i$ and the number of workers in industry $i$ which belong to generation $g$ is denoted $n_{g,i}$.  We can also use variation in sectoral composition across states to compute a $\mbox{generation}\times\mbox{industry}\times\mbox{year}$ specific labour share.\footnote{We could alternatively use variation  industries to compute a state, year, and generation specific labour share. That is: \begin{equation}
+    \lambda_{g,s}^{t}=\sum_{i} \lambda_{i}^{s,t} w^{s,t}_{g,i}
+    \end{equation}. } 
+\begin{equation}
+\lambda_{g,i}^{t}=\sum_{s} \lambda_{i}^{s,t} w^{s,t}_{g,i}
+\end{equation}
+
+And similarly for $\mbox{generation}\times\mbox{state}\times\mbox{year}$
+
+
+
+
+If labour markets were competitive then workers would be paid their marginal product, wages would be equal, and differences in the labour share would reflect only differences in the technology of production.\footnote{Here we are implicitly assuming labour is homogeneous. 
+The same intuition is obtained with workers of different types but wages will vary as well as  the labour share in the absence of rents.} 
+Given labour markets are imperfectly competitive then differences in the labour share will also reflect differences in rents \citep{Manning2011}. 
+Thus, intra-industry differences in the labour share received by different generations could reflect differences in the occupations of workers of different generations, and thus their marginal products, as well as differences in the rents received due to differences in bargaining power. 
+To avoid making this assumption, we disentangle these two different effects by controlling for individuals' occupations in our regression analyses. \textbf{and variance decompositions.} 
+Thus, we compare the labour share of workers in a given industry by generation, holding the precise nature of their job constant. 
+This means our assumption is now that in a given year, in a given industry, and in a given state, two workers of different generations but with the same precise occupation code have similar technologies of production. 
+\textbf{ Update Discussion of Figure~.}
+Figure~\ref{fig:occ_share} plots the share of each generation in each occupation at age 30, this shows that there is persistence in the occupation individuals are working in across generations.\footnote{Figure~\ref{fig:AppOcc} in Appendix~\ref{sec:resultsappendix} shows the breakdown by all occupation codes rather than the aggregate codes used here.}
+
+\begin{figure}[ht]
+\caption{Share of individuals in Occupations at age 30 by Generation}\label{fig:occ_share} 
+\includegraphics[width=\linewidth]{share_byoccupation_group_fine_v2_age30.pdf}
+\subcaption*{\emph{Source:} ASEC supplement of the Current Population Survey (CPS), survey years 1962-2018 \\
+%\emph{Notes:} 
+}
+\end{figure}
+
+Figure~\ref{fig:ind_share} reports how the industrial composition of the workforce has varied by generation for Men and Women. Looking first at the data for men, for whom labour market attachment has been relatively constant across generations, we note the expansion of employment in the service sector and the coincident decline in expansion in the manufacturing sector. There has also been a small reduction in Wholesale work, and a slight increase in construction. 
+
+A similar pattern can be seen in the data for women, albeit with a larger (smaller) starting share of service (manufacturing) employment. 
+
+
+
+
+How/Why the labour share might vary by generation.
+
+Insider-Outsider \citep{Lindbeck2001}? Search \cite{McLaughlin1994}
+
+This argument then applies by gender/race/educ.
+
+How we calculate the labour share and what we need to assume to do so? 

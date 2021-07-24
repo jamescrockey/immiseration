@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Immiseration2V1.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: WagesAggregate.aux
+A level-1 auxiliary file: WagesConditional.aux
+A level-1 auxiliary file: LabourShareCalc.aux
+A level-1 auxiliary file: LabourShareResults.aux
+A level-1 auxiliary file: Explanations.aux
+A level-1 auxiliary file: Conclusion.aux
+The style file: ecta.bst
+A level-1 auxiliary file: DataAppendix.aux
+A level-1 auxiliary file: AppendixAdditionalResults.aux
+A level-1 auxiliary file: AppendixRobustnessChecks.aux
+A level-1 auxiliary file: AppendixTables.aux
+Database file #1: immiseration.bib
+Warning--empty note in Guvenen2017
+You've used 32 entries,
+            2849 wiz_defined-function locations,
+            818 strings with 9755 characters,
+and the built_in function-call counts, 19608 in all, are:
+= -- 1615
+> -- 842
+< -- 42
++ -- 283
+- -- 233
+* -- 1706
+:= -- 2993
+add.period$ -- 60
+call.type$ -- 32
+change.case$ -- 205
+chr.to.int$ -- 32
+cite$ -- 33
+duplicate$ -- 1440
+empty$ -- 1457
+format.name$ -- 380
+if$ -- 3892
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 274
+newline$ -- 101
+num.names$ -- 161
+pop$ -- 502
+preamble$ -- 1
+purify$ -- 205
+quote$ -- 0
+skip$ -- 517
+stack$ -- 0
+substring$ -- 964
+swap$ -- 734
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 368
+warning$ -- 1
+while$ -- 141
+width$ -- 0
+write$ -- 386
+(There was 1 warning)

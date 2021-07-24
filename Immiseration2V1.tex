@@ -1,0 +1,251 @@
+
+\documentclass[pdftex,11pt,a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[sc,osf]{mathpazo}
+%\usepackage{kpfonts}
+%\usepackage{PWIQF}
+\usepackage{lmodern}
+
+\usepackage[TS1,T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[UKenglish]{babel}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[capposition=top]{floatrow}
+\usepackage{xcolor}
+\usepackage{bbm}
+\usepackage[comma,authoryear]{natbib}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{threeparttablex}
+\usepackage{tabu}
+\usepackage{lscape}
+\usepackage{pgfplots}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{tikzinclude}
+\usepackage{epstopdf}
+%\usepackage{ctable}
+\usepackage[document]{ragged2e}
+\usepackage{bbm}
+\usepackage{blindtext}
+\usepackage{tabularx}
+\let\counterwithout\relax
+\let\counterwithin\relax
+\usepackage{chngcntr} % use counterwithin to separately number appendix figures etc. 
+\usepackage[section]{placeins}
+\setcounter{MaxMatrixCols}{10}
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\pgfplotsset{plot coordinates/math parser=false} 
+\newlength\figureheight 
+\newlength\figurewidth 
+\pgfplotsset{compat=1.8,width=\linewidth}
+\DeclareGraphicsExtensions{.eps}
+\newcommand{\cn}[1]{\citet{#1}}
+\newcommand{\ala}{\textit{\`{a} la}}
+\newcommand{\Ala}{\textit{\`{A} la}}
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\left(#1\right)}}
+\newcommand{\citesee}[1]{\citep[see,][]{#1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\newcolumntype{.}{D{.}{.}{5,6}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\widowpenalty10000
+\clubpenalty10000
+\doublespacing
+
+\newcommand{\rb}[1]{\colorbox{red}{#1}}
+\newcommand{\blb}[1]{\colorbox{blue}{#1}}
+
+%\input{tcilatex}
+
+% *****************************************************************
+% Estout related things
+% *****************************************************************
+\newcommand{\sym}[1]{\rlap{#1}}% Thanks to David Carlisle
+
+\let\estinput=\input% define a new input command so that we can still flatten the document
+
+\newcommand{\estwide}[3]{
+\vspace{.75ex}{
+\begin{tabular*}
+{\textwidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{#2}{#3}}
+\toprule
+\estinput{#1}
+\bottomrule
+\addlinespace[.75ex]
+\end{tabular*}
+}
+} 
+
+\newcommand{\estauto}[3]{
+\vspace{.75ex}{
+\begin{tabular}{l*{#2}{#3}}
+\toprule
+\estinput{#1} \\
+\bottomrule
+\addlinespace[.75ex]
+\end{tabular}
+}
+}
+
+% Allow line breaks with \\ in specialcells
+\newcommand{\specialcell}[2][c]{%
+\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+% *****************************************************************
+% Custom subcaptions
+% *****************************************************************
+% Note/Source/Text after Tables
+\newcommand{\figtext}[1]{
+\vspace{-1.9ex}
+\captionsetup{justification=justified,font=footnotesize}
+\caption*{\hspace{6pt}\hangindent=1.5em #1}
+}
+\newcommand{\fignote}[1]{\figtext{\emph{Note:~}~#1}}
+
+\newcommand{\figsource}[1]{\figtext{\emph{Source:~}~#1}}
+
+% Add significance note with \starnote
+\newcommand{\starnote}{\figtext{* p < 0.1, ** p < 0.05, *** p < 0.01. Standard errors in parentheses.}}
+\usepackage{threeparttable}% Alternative for Notes below table
+
+% Note/Source/Text after Tables
+\newcommand{\Figtext}[1]{%
+\begin{tablenotes}[para,flushleft]
+\hspace{6pt}
+\hangindent=1.75em
+#1
+\end{tablenotes}
+}
+
+\newcommand{\Fignote}[1]{\Figtext{\emph{Note:~}~#1}}
+\newcommand{\Figsource}[1]{\Figtext{\emph{Source:~}~#1}}
+\newcommand{\Starnote}{\Figtext{* p < 0.1, ** p < 0.05, *** p < 0.01. Standard errors in parentheses.}}% Add significance note with \starnote
+
+
+% *****************************************************************
+% siunitx
+% *****************************************************************
+\usepackage{siunitx} % centering in tables
+\sisetup{
+detect-mode,
+tight-spacing		= true,
+group-digits		= false ,
+input-signs		= ,
+input-symbols		= ( ) [ ] - + *,
+input-open-uncertainty	= ,
+input-close-uncertainty	= ,
+table-align-text-post	= false
+}
+
+\usepackage{hyperref}        
+\hypersetup{
+  bookmarks=true,         % show bookmarks bar?
+  unicode=false,          % non-Latin characters in Acrobat?s bookmarks
+  pdftoolbar=true,        % show Acrobat?s toolbar?
+  pdfmenubar=true,        % show Acrobat?s menu?
+  pdffitwindow=false,     % window fit to page when opened
+  pdfstartview={FitH},    % fits the width of the page to the window
+  pdftitle={My title},    % title
+  pdfauthor={Author},     % author
+  pdfsubject={Subject},   % subject of the document
+  pdfcreator={Creator},   % creator of the document
+  pdfproducer={Producer}, % producer of the document
+  pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+  pdfnewwindow=true,      % links in new window
+  colorlinks=true,     % color of internal links (change box color with linkbordercolor)
+  citecolor=blue,        % color of links to bibliography
+  filecolor=magenta,      % color of file links
+  urlcolor=blue           % color of external links
+  }
+%\input{tcilatex}
+
+\begin{document}
+
+\title{The declining fortunes of (most) American workers V2}
+\author{Laura A. Harvey\thanks{Email: \texttt{laura.a.harvey@uea.ac.uk} and \texttt{jamesrockeyecon@gmail.com}. \emph{Corresponding Author:} Laura A. Harvey, School of Economics, University of East Anglia, Norwich Research Park, NR4 7TJ, UK.
+We thank Jonathan Temple, René Lindstädt, Brad Larsen, Adam Rosen, Cheng Chou and Sebastian Cortes-Corrales as well as seminar participants at Leicester, Groningen, Birmingham and East Anglia for their insightful comments.} \\
+%EndAName
+${\mbox{University of East Anglia}}$ \and James Rockey\\
+%EndAName
+$\mbox{University of Birmingham}$ }
+\date{June 2021}
+\maketitle
+\justify
+\begin{abstract}
+\noindent 
+
+While real US GDP per capita has increased around 80\% since 1980, median incomes have remained roughly constant. This paper documents that: 1) This stagnation masks an important intergenerational decline -- more recent generations have earned less than less recent ones. 2) This decline is largest amongst white males without college educations. But, find evidence for similar declines amongst those with college educations. The decline is also sufficiently large to more than offset reductions in the racial and gender wage gaps. 3) Exploiting state and industry variation in workforce composition we obtain race and gender-specific labour share estimates. Data suggest that inter-generational declines in the labour share have accounted for much of the decline in earnings. 4) \color{red}{Such inter-generational reductions in the labour share, and wages, are lower amongst union members.}
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords: Wages, Intergenerational Differences, Labour Share, Stagnation, Jobs} \\
+\textbf{JEL Codes: E24, J24, J31, D33, D31} \\
+\noindent 
+\end{abstract}
+\vfill
+\section{Introduction}
+
+\include{Introduction.tex}
+
+\section{Wages: Aggregates}\label{sec:wages}
+\include{WagesAggregate.tex}
+%Figure 2
+
+
+\section{Wages: Microdata\label{sec:regressions}}
+\include{WagesConditional.tex}
+
+\section{Labour Share}
+\include{LabourShareCalc.tex}
+\include{LabourShareResults.tex}
+
+
+
+
+\section{Explanations}
+\include{Explanations.tex}
+
+\section{Conclusion}
+\include{Conclusion.tex}
+\clearpage
+\bibliographystyle{ecta}
+\bibliography{immiseration}
+
+
+\clearpage
+\appendix  
+%\section*{Appendix}%
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section*{NOT FOR PUBLICATION APPENDICES}
+\section{Data appendix}\label{sec:data_appendix}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\include{DataAppendix.tex}
+\section{Additional results}\label{sec:resultsappendix}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\include{AppendixAdditionalResults.tex}
+
+\section{Robustness Checks}\label{sec:RobustnessAppendix}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}%
+\include{AppendixRobustnessChecks.tex}
+\section{Tables}\label{sec:TablesAppendix}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\include{AppendixTables.tex}
+
+\end{document}

@@ -1,0 +1,213 @@
+\subsection{Current Population Survey (CPS)}
+The CPS is individual micro-level data which is available from $1962$ to $2018$ and with the sample weights it is representative of the US population each year. We use the ASEC supplement of the March CPS for our analysis, the core of which is at the cohort or generation level. These are defined by the year of birth of individuals, which we work out from year of survey and their age. The classifications of which are presented in Table~\ref{cohort}.  The first column refers to year born with the corresponding definition in the right column. 
+
+
+\begin{table}[h!]
+\begin{threeparttable}
+\caption{Different birth cohorts.\label{cohort}}
+\begin{tabular}{l|l}   
+\hline
+\textbf{Year born} & \textbf{Birth cohort} \\
+\hline
+2000 -- Present & Generation Z 			\\
+1980 -- 1999 	& Millennials (Gen. Y) \\
+1965 -- 1979 	& Generation X (Gen. X)\\
+1946 -- 1964  	& Baby Boomers (Boomers)\\
+1925 --	1945	& Silent Generation 	\\	
+\hline
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+
+\subsection{Summary of the data}
+
+In Table~\ref{table2}, summary statistics for the CPS are presented, both for each of our cohorts and for the total sample. All monetary amounts are adjusted for inflation using Consumer Price Index (CPI) with 1999 as the base year. We make a number of sample restrictions. Firstly, we drop individuals who are self-employed, in education or working for the government. And secondly, we consider only individuals between the ages of 23 and 65. Further to this, we also drop observations where the annual earnings do not meet the minimum income threshold. Following \cite{Guvenen2017}, we define the threshold as $520$ hours times half the federal minimum wage for that year. Lastly, all results are produced using the probability weights provided by the CPS. 
+
+The ASEC supplement of the March CPS is not affected by the same survey redesign which affects the May CPS and Outgoing Rotation Group samples. The our main income variable, annual wage and salary income, is broadly consistent over the time period considered. Inconsistencies could arise from minor changes in the wording of the survey. Similarly, there are changes in top-coding conventions, but given most of our results are working with the median, this should not affect our results. 
+
+
+\begin{table}[h]\centering
+\scalebox{0.65}{
+\begin{threeparttable}
+\caption{Summary statistics (CPS), total and by cohort}
+\estauto{sumstats_may20.tex}{11}{c} 
+\Fignote{The sample used includes only individuals who are in employment, and are not the self employed or those working for the government. We include those between the ages of 23 and 65. We drop observations which do not meet the minimum income threshold as described in the main text. Income and wage variables are in 1999 US dollars. Summary statistics are produced using the individual weights from the CPS. }
+\label{table2}
+\end{threeparttable}
+}
+\end{table}
+
+We calculate the hourly wage as the income from labour divided by the usual hours worked per week last year times by the 52 weeks of the year. Demographic variables are coded as dummy variables.  The main income measure we use is  total pre-tax wage and salary income in the year prior to the survey.\footnote{There were changes in the question wording which might impact our results, notably, for the period $1962-1968$, respondents were asked how much they earned in wages and salary. For 1969-1979, they asked about wages or salary before any deductions. For later years, respondents were prompted to include overtime pay, tips, bonuses, and commissions from their primary employer, as well as money from other employers.} Our preferred occupation controls are six broad occupation categories, aggregated from the 389 categories included in the CPS. Our results are robust to the inclusion of finer occupation codes. 
+
+
+\subsection{Economic Census}
+The Economic Census is available every five years, beginning in $1977$. The survey contains data regarding eight primary industries; Retail Trade, Wholesale Trade, Service, Finance, Construction, Manufacturing, and Utilities and Transport. The data coverage varies depending on the wave of the survey and by geographic level.
+
+There are a number of series which are available across all years and industries: 
+geographic series, non-employer statistics and subject series are the main available data series. 
+We predominately be use the geographic series, which contains detailed information about establishments which have payroll. Data is organised by type of business and geographic areas; the United States, States, Metropolitan Areas, Counties and Places. The earlier data was aggregated mostly to broad industry  levels, for this reason we also use broad industry codes to maximise the amount of data available.  Similarly, we use state level data, going to metropolitan statistical area (MSA) leads to a number of cells to be suppressed, hence losing a number of observations. So to maximise the available sample, we use state level, broad industry groupings.
+
+Where we have observations, we can know the number of establishments, annual payroll in \$1000, value of first quarter payroll and value of sales and receipts.  It is important to note that not all industries within a particular sector are covered by the economic census. These include; schools (all levels), the US Postal Service, public administration, private households and membership organisations.  Moreover, not all industries are represented in all years. For example, we only have data on Utilities and Transportation from 1992. The only industries which we observe in each wave of the Economic Census are Retail, Services and Wholesale Trade. Further to this, only value added is available for the manufacturing industry in 1982 and 1987.
+
+%Another feature of the service industry part of the economic census is that it is separated between those industries subject to federal income tax and those which are not. 
+
+%In addition to matching at the broad state level and 2 digit industry we can also consider the MSA level both a 1-digit and 2-digit merge, this helps, to a certain extent address the issue of observation in the CPS who can only be matched to a broad sector rather than a 2-digit SIC code. 
+
+%Specifics relating to the available data is discussed in more detail below for each sector.   
+
+%Recall that later census sometimes have data relating to earlier years - should check if any of this can be used. 
+%Some data has been suppressed - can we try to input an estimate here?
+
+%List availability of key variables?
+
+%\begin{table}[H]\centering
+%\scalebox{0.75}{
+%\begin{threeparttable}
+%\caption{Labour Share Summary}
+%\estauto{labsh_psuedo.tex}{11}{c}
+%\Fignote{Labour share is presented as the ratio of payroll to sales.}
+%\label{table2}
+%\end{threeparttable}
+%}
+%\end{table}
+
+\subsubsection{Creating consistent industry codes}
+
+The CPS contains consistent industry codes from $1968- present$ using the 1990 census classification. However, the Economic Census makes use of Standard Industrial Classification of Economic Activities (SIC) codes and then later North American Industry Classification System (NAICS) coding, see Table~\ref{indyear} for a summary of the industry codes which are used when. We address this , using NAICS cross-walks to create a set of consistent NAICS codes.\footnote{See  https://www.census.gov/eos/www/naics/concordances/concordances.html for NAICS cross-walks} We then use the cross-walks of \cite{david:2013} and \cite{david:2017} to create the consistent industry codes across SIC  and match our data sets using a combination of SIC and NAICs codes. Using this  consistent coding we then match the census data to the CPS data using year, state and industry identifiers
+
+\begin{table}[h]
+\begin{center}
+\caption{Industry coding by year in the economic census.}
+\label{indyear}
+\begin{tabular}{l|l}   
+\hline
+\textbf{Year} &	\textbf{Industry code} \\
+\hline
+1977--1982	& 1972 SIC Code\\
+1987--1997	& 1987 SIC Code\\
+1997--2012	& Year Specific NAICS Code\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Not all levels of disaggregation in the industry codes are available every year. So working with a more disaggregated industry classification implies truncating the sample. Notably, $1977$ and $1982$ contain only the most aggregating industry coding and as such as we lose these years of observations if we work with the disaggregated classification. 
+
+\textbf{Pre-1997 data} \\
+Here, the industry coding used is not consistent and the available granularity of the data is year and industry dependant. We have in the two-digit industry code the sales and number of establishments, however we do not have number of employees or the payroll information.  In some cases the best we can do is to aggregate at the industry level only. Therefore, to make use of this data we take the aggregate state and 1-digit SIC level data. 
+
+\textbf{Post-1997 data} \\
+The raw economic census data provided breakdowns from two-digit codes up to six-digit codes for a range of industries. For the industries where the broadest classification was three digit, we summed across to collapse to a two-digit industry code which could be merged with the 1990 industry codes. We can then in turn collapse to the 1 digit broad industry code for our main analyses. %We aggregated the flags such that there is just an indicator as to whether a flag was present for one of the observations at the three-digit level, but does not specify the type of special condition which the flag represented. 
+
+
+\subsection{Merging the data}
+We aggregate to various industry and geographic levels to merge with the industry-level data. This is because of a limitation of the data means that finer industry categories or using Metropolitan Statistical Area (MSA) leads to a large amount of suppressed values in order to protect identity of the firms, for example. As a result we merge using the state and broad industry category. 
+
+These are sufficient to merge with the available firm-level microdata. In the CPS, around 4.4\% of the observations have an unidentified state. Additionally, industries are identified using SIC codes in the CPS data. 
+
+As discussed, the Economic Census does not cover the universe of industries and occupations. As a result, for the purpose of merging the two data sets, we drop from our CPS sample those industries which are not covered by the Census. This equates to dropping just over 10\% of the observations.  The industries which are excluded are presented below in Table~\ref{cpsind}.
+
+\begin{table}[h]
+\begin{center}
+\caption{Summary of excluded industries}
+\label{cpsind}
+\begin{tabular}{l|l}   
+\hline
+\textbf{1990 Census industry} &	\textbf{Title} \\
+\hline
+10-32 & Agriculture, Forestry \& Fisheries\\
+400	& Railroads\\
+412	& US Postal Service\\
+710 & Security, commodity brokerage, and investment companies\\
+711 & Insurance \\
+873	& Labour Unions \\
+880 & Religious Organisations \\
+881 & Membership Organisations \\
+>900 & Public Administration\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%We can then classify the industry codes by broad one-digit industry type. Which is the broadest level of the merging and matching.  We are able to match SIC codes and industry census codes confidently at the two-digit level. Then adding additional variation with merges at different geographical levels. Where there are gaps in the cross-walks, that is an 1990 industry code does not map to a two-digit industry code we impute this ourselves if possible. For some we are not able to impute a two-digit NAICS code for example, an 1990 industry code of \emph{392 - Manufacturing, n.s (Not specified)} could refer to a NAICS sector code of either 31, 32 or 33. 
+
+We lose around 5\% of observations each year during the merge. More so in the earlier years as the number of industries which were included was much more limited than in later surveys. 
+
+
+\subsection{The National Income and Product Accounts (NIPA)}
+The National Product and Income Accounts (NIPA) are provided by the Bureau of Economic Analysis (BEA) and at a much more aggregated level than that of the Economic Census. The NIPA data is produced from a number of sources at a much higher frequency than that of the Economic Census. Moreover, it contains measures of value added for all industries rather than just Manufacturing as in the Economic Census. 
+
+The NIPA data also contains more detailed data on employee compensation. They record a main employee compensation variable which is formed of two components which is also included in the data. Firstly, wages and salaries which we refer to as the payroll amount, which contains any payment to the worker including tips and bonuses and other employee contributions. The second component is supplements to wages and salaries, this includes additional fringe benefits of employment, such as employer contribution to pension and insurance funds, and the employer contribution to Government social security.  Furthermore, NIPA contains value added for all industries included, however not sales. The closest proxy to this is what they refer to as gross output which is the value of sales or receipts. Alternatively, the contribution to GDP of each industry in a state is also available. 
+
+One key difference between the NIPA data and that in the economic census is how it classifies firms which operate in different industries. For example, retail firms who also have manufacturing operations will only have data captured in one of the sectors, even though they operate in multiple ones.  Another thing to keep in mind when comparing the NIPA to Economic Census is that in the Economic Census a number of sub-industries are excluded. This is not the case with the NIPA data. 
+
+Below in Figure~\ref{replication}, we recreate the payroll to value added for six industries as is presented in the appendix of \cite{autoretal:2020}, however extending the years considered to take advantage of the time series available. We produce the same graph in Figure~\ref{replication1}, however using different measures for labour share given the different variables available in the NIPA data.  
+
+\begin{figure}\centering
+\caption{Labour share over time for different industries: Payroll to value added ratio.}
+\includegraphics[width=13cm]{payroll_VA_industry.pdf}
+\label{replication}
+\subcaption*{\emph{Source:} National Income and Product Accounts (NIPA)\\
+\emph{Notes:}Replication of the labour share calculations using NIPA data as seen in the appendix of \cite{autoretal:2020}, however extending the years considered. }
+\end{figure}
+
+In looking at Figure~\ref{replication1} it is evident that the value of the labour share can depend quite a lot on how it is defined. The solid blue line is the payroll over value added; the traditional definition. However, in the Economic Census, value added is not available so we use the payroll to sales ratio. In NIPA, annual value of sales is not available so the closest measure they have is the gross output.  This proxy payroll to sales ratio using NIPA is the red dashed line in Figure~\ref{replication1}. This gives a lower value of the labour share for each industry at each point in time.  
+
+\begin{figure}
+\caption{Different ways to measure labour share in NIPA}
+\includegraphics[width=13cm]{NIPA_all_lb_definitions.pdf}
+\subcaption*{\emph{Source:} National Income and Product Accounts (NIPA)\\
+\emph{Notes:} Each panel shows the labour share over time using the different definitions available in the NIPA data. Sales refers to the gross output. Payroll refers to wages and salaries only, whilst compensation includes this in addition to other employee benefits. VA is the value added. }
+\label{replication1}
+\end{figure}
+
+Looking at the results by \cite{autoretal:2020} they document a number of differences between the NIPA and the Economic Census, which we should also bear in mind when looking at our results. They find that the are difference in the reported labour share by industry depending on which data is used. They find this is likely due to difference in the sales and gross output variables whilst payroll seems to reflect similar trends. 
+
+More concretely, they document that for Wholesale Trade and Finance the Economic Census overstates the labour share compared to the NIPA data, while for Services, and Utilities and Transportation the economic census gives lower estimates of the labour share.  Manufacturing and Retail appear to offer similar trends. 
+
+
+\subsubsection*{Trends by generation}
+Using the various measures of labour share plotted above, we can recreate the labour share experienced at each age by generation by weighting the labour share.  
+These results are again using the aggregate national data by year from NIPA. We see patterns which are similar to what we observe with the economic census. A clear dominance in the share of the labour share by older generations compared to their younger counterparts. 
+
+
+%\begin{figure}[h!]
+%\caption{Labour share by generation and by age using NIPA (Payroll/VA)}
+%\includegraphics[width=13cm]{lbshare_sales_bygen_aggNIPA_alldata.pdf}
+%\subcaption*{\emph{Source:} National Income and Produce Accounts (NIPA) \& Current Population Survey (CPS) \\
+%\emph{Notes:} Data is merged at the year, state and one-digit industry level as described in Appendix~\ref{sec:data_appendix}. The labour share is calculated as described in Section~\ref{sec:labsharemeasure}.}
+%\end{figure}
+
+%\begin{figure}
+%\caption{Labour Share by Generation and by Age using NIPA (Payroll/VA)}
+%\includegraphics[width=13cm]{lbsharebygen_aggNIPA_alldata.pdf}
+%\end{figure}
+
+
+
+\begin{figure}
+\caption{Labour share by generation and by age using NIPA (Payroll/Sales)}
+\includegraphics[width=13cm]{lbshare_sales_bygen_aggNIPA_alldata.pdf}
+\subcaption*{\emph{Source:} National Income and Produce Accounts (NIPA) \& ASEC supplement of the Current Population Survey (CPS), survey years 1962-2018 \\
+\emph{Notes:} Data is merged at the year, state and one-digit industry level as described in Appendix~\ref{sec:data_appendix}. The labour share is calculated as described in Section~\ref{sec:labsharemeasure}.}
+\end{figure}
+
+
+%\begin{figure}
+%\caption{Labour Share by Generation and by Age using NIPA (Compensation/Sales)}
+%\includegraphics[width=13cm]{lbshare_salescomp_bygen_aggNIPA_alldata.pdf}
+%\end{figure}
+
+
+%\begin{figure}
+%\caption{Labour Share by Generation and by Age using NIPA (Compensation/VA)}
+%\includegraphics[width=13cm]{lbshare_vacomp_bygen_aggNIPA_alldata.pdf}
+%\end{figure}
+
+
+%Similar to the Economic Census, however NIPAs provides more aggregate level data at industry and geographic levels and is provided by the Bureau of Economic Analysis (BEA).
+
+%The data is taken from a number of sources to compile the aggregated industry and geographic level data, including the Economic Census. This data contains numerous useful variables such as; value added, GDP by industry or geography, employee compensation and measures of depreciation.  
+
+%A possible issue with the NIPA data is that it gathered at the firm level rather than the establishment level as with the census. For this reason, a firm which might operate in two areas, ie have manufacturing and retail operations would be classified in solely one industry whereas the census would separate these operations.  

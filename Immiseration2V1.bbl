@@ -1,0 +1,179 @@
+\begin{thebibliography}{32}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[\protect\citeauthoryear{Acemoglu and Autor}{Acemoglu and
+  Autor}{2011}]{Acemoglu2011}
+\textsc{Acemoglu, D. and D.~Autor} (2011): \emph{{Skills, tasks and
+  technologies: Implications for employment and earnings}}, vol.~4, Elsevier
+  Inc.
+
+\bibitem[\protect\citeauthoryear{Acemoglu and Restrepo}{Acemoglu and
+  Restrepo}{2018}]{Acemoglu2018}
+\textsc{Acemoglu, D. and P.~Restrepo} (2018): \enquote{The Race between Man and
+  Machine: Implications of Technology for Growth, Factor Shares, and
+  Employment,} \emph{American Economic Review}, 108, 1488--1542.
+
+\bibitem[\protect\citeauthoryear{Autor, Dorn, and Hanson}{Autor
+  et~al.}{2019}]{david:2017}
+\textsc{Autor, D., D.~Dorn, and G.~Hanson} (2019): \enquote{When Work
+  Disappears: Manufacturing Decline and the Falling Marriage Market Value of
+  Young Men,} \emph{American Economic Review: Insights}, 1, 161--78.
+
+\bibitem[\protect\citeauthoryear{Autor, Dorn, and Hanson}{Autor
+  et~al.}{2013}]{david:2013}
+\textsc{Autor, D., D.~Dorn, and G.~H. Hanson} (2013): \enquote{The China
+  syndrome: Local labor market effects of import competition in the United
+  States,} \emph{American Economic Review}, 103, 2121--68.
+
+\bibitem[\protect\citeauthoryear{Autor, Dorn, Katz, Patterson, and
+  Van~Reenen}{Autor et~al.}{2020}]{autoretal:2020}
+\textsc{Autor, D., D.~Dorn, L.~F. Katz, C.~Patterson, and J.~Van~Reenen}
+  (2020): \enquote{{The Fall of the Labor Share and the Rise of Superstar
+  Firms*},} \emph{The Quarterly Journal of Economics}.
+
+\bibitem[\protect\citeauthoryear{Autor and Salomons}{Autor and
+  Salomons}{2018}]{Autor2018a}
+\textsc{Autor, D. and A.~Salomons} (2018): \enquote{{Is Automation Labor
+  Share-Displacing? Productivity Growth, Employment, and the Labor Share},}
+  \emph{Brookings Papers on Economic Activity}, 2018, 1--87.
+
+\bibitem[\protect\citeauthoryear{Black, Kolesnikova, Sanders, and Taylor}{Black
+  et~al.}{2013}]{Black2013}
+\textsc{Black, D.~A., N.~Kolesnikova, S.~G. Sanders, and L.~J. Taylor} (2013):
+  \enquote{{The role of location in evaluating racial wage disparity},}
+  \emph{IZA Journal of Labor Economics}.
+
+\bibitem[\protect\citeauthoryear{Blundell, Bozio, and Laroque}{Blundell
+  et~al.}{2011}]{Blundell2011}
+\textsc{Blundell, R., A.~Bozio, and G.~Laroque} (2011): \enquote{{Labor supply
+  and the extensive margin},} \emph{American Economic Review}, 101, 482--486.
+
+\bibitem[\protect\citeauthoryear{Bowlus and Robinson}{Bowlus and
+  Robinson}{2012}]{Bowlus2012}
+\textsc{Bowlus, A.~J. and C.~Robinson} (2012): \enquote{{Human Capital Prices,
+  Productivity, and Growth},} \emph{American Economic Review}, 102, 3483--3515.
+
+\bibitem[\protect\citeauthoryear{Burstein, Morales, and Vogel}{Burstein
+  et~al.}{2019}]{Burstein2019}
+\textsc{Burstein, A., E.~Morales, and J.~Vogel} (2019): \enquote{{Changes in
+  Between-Group Inequality: Computers, Occupations, and International Trade},}
+  \emph{American Economic Journal: Macroeconomics}, 11, 348--400.
+
+\bibitem[\protect\citeauthoryear{Chetty, Hendren, Kline, Saez, and
+  Turner}{Chetty et~al.}{2014}]{chetty:2014}
+\textsc{Chetty, R., N.~Hendren, P.~Kline, E.~Saez, and N.~Turner} (2014):
+  \enquote{Is the United States still a land of opportunity? Recent trends in
+  intergenerational mobility,} \emph{American Economic Review}, 104, 141--47.
+
+\bibitem[\protect\citeauthoryear{Chetverikov, Larsen, and Palmer}{Chetverikov
+  et~al.}{2016}]{Chetverikov2016}
+\textsc{Chetverikov, D., B.~Larsen, and C.~Palmer} (2016): \enquote{{IV
+  Quantile Regression for Group-Level Treatments, With an Application to the
+  Distributional Effects of Trade},} \emph{Econometrica}, 84, 809--833.
+
+\bibitem[\protect\citeauthoryear{Elsby, Hobijn, and Sahin}{Elsby
+  et~al.}{2013}]{Elsby2013}
+\textsc{Elsby, M., B.~Hobijn, and A.~Sahin} (2013): \enquote{The Decline of the
+  U.S. Labor Share,} \emph{Brookings Papers on Economic Activity}, 44, 1--63.
+
+\bibitem[\protect\citeauthoryear{Friedman}{Friedman}{2005}]{freidman:2005}
+\textsc{Friedman, B.~M.} (2005): \emph{The Moral Consequences of Economic
+  Growth}, New York: Alfred A. Knopf.
+
+\bibitem[\protect\citeauthoryear{Fryer}{Fryer}{2011}]{Fryer2011}
+\textsc{Fryer, R.} (2011): \enquote{Racial inequality in the 21st century: The
+  declining significance of discrimination,} in \emph{Handbook of Labor
+  Economics}, Elsevier, vol.~4, 855--971.
+
+\bibitem[\protect\citeauthoryear{Gabaix, Lasry, Lions, and Moll}{Gabaix
+  et~al.}{2016}]{Gabaix2016}
+\textsc{Gabaix, X., J.-M. Lasry, P.-L. Lions, and B.~Moll} (2016): \enquote{The
+  Dynamics of Inequality,} \emph{Econometrica}, 84, 2071--2111.
+
+\bibitem[\protect\citeauthoryear{Goldin}{Goldin}{2014}]{Goldin2014}
+\textsc{Goldin, C.} (2014): \enquote{{A Grand Gender Convergence: Its Last
+  Chapter},} \emph{American Economic Review}, 104, 1091--1119.
+
+\bibitem[\protect\citeauthoryear{Gordon}{Gordon}{2017}]{Gordon2017}
+\textsc{Gordon, R.~J.} (2017): \emph{The rise and fall of American growth: The
+  US standard of living since the civil war}, vol.~70, Princeton University
+  Press.
+
+\bibitem[\protect\citeauthoryear{Grossman, Helpman, Oberfield, and
+  Sampson}{Grossman et~al.}{2018}]{Grossman2018}
+\textsc{Grossman, G., E.~Helpman, E.~Oberfield, and T.~Sampson} (2018):
+  \enquote{The Productivity Slowdown and the Declining Labor Share,} 2018
+  Meeting Papers 169, Society for Economic Dynamics.
+
+\bibitem[\protect\citeauthoryear{Guvenen, Kaplan, Song, and Weidner}{Guvenen
+  et~al.}{2017}]{Guvenen2017}
+\textsc{Guvenen, F., G.~Kaplan, J.~Song, and J.~Weidner} (2017):
+  \enquote{{Lifetime Incomes in the United States Over Six Decades},} .
+
+\bibitem[\protect\citeauthoryear{Jorgenson, Ho, and Stiroh}{Jorgenson
+  et~al.}{2008}]{Jorgenson2008}
+\textsc{Jorgenson, D.~W., M.~S. Ho, and K.~J. Stiroh} (2008): \enquote{A
+  retrospective look at the US productivity growth resurgence,} \emph{Journal
+  of Economic Perspectives}, 22, 3--24.
+
+\bibitem[\protect\citeauthoryear{Karabarbounis and Neiman}{Karabarbounis and
+  Neiman}{2014}]{Karabarbounis2008}
+\textsc{Karabarbounis, L. and B.~Neiman} (2014): \enquote{{The Global Decline
+  of the Labor Share},} \emph{The Quarterly Journal of Economics}, 129,
+  61--103.
+
+\bibitem[\protect\citeauthoryear{Kopczuk, Saez, and Song}{Kopczuk
+  et~al.}{2010}]{Kopczuk2010}
+\textsc{Kopczuk, W., E.~Saez, and J.~Song} (2010): \enquote{{Earnings
+  Inequality and Mobility in the United States: Evidence from Social Security
+  Data since 1937},} \emph{The Quarterly Journal of Economics}, 125, 91--128.
+
+\bibitem[\protect\citeauthoryear{Lindbeck and Snower}{Lindbeck and
+  Snower}{2001}]{Lindbeck2001}
+\textsc{Lindbeck, A. and D.~J. Snower} (2001): \enquote{{Insiders versus
+  Outsiders},} \emph{Journal of Economic Perspectives}, 15, 165--188.
+
+\bibitem[\protect\citeauthoryear{Manning}{Manning}{2011}]{Manning2011}
+\textsc{Manning, A.} (2011): \enquote{{Imperfect Competition in the Labor
+  Market},} in \emph{{Handbook of Labor Economics}}, ed. by O.~Ashenfelter and
+  D.~Card, Elsevier, vol.~4 of \emph{Handbook of Labor Economics}, chap.~11,
+  973--1041.
+
+\bibitem[\protect\citeauthoryear{McDaniel}{McDaniel}{2011}]{McDaniel2011}
+\textsc{McDaniel, C.} (2011): \enquote{{Forces shaping hours worked in the
+  OECD, 1960-2004},} \emph{American Economic Journal: Macroeconomics}, 3,
+  27--52.
+
+\bibitem[\protect\citeauthoryear{McLaughlin}{McLaughlin}{1994}]{McLaughlin1994}
+\textsc{McLaughlin, K.~J.} (1994): \enquote{{Rent Sharing in an Equilibrium
+  Model of Matching and Turnover},} \emph{Journal of Labor Economics}, 12,
+  499--523.
+
+\bibitem[\protect\citeauthoryear{Philippon and Reshef}{Philippon and
+  Reshef}{2012}]{Philippon2012}
+\textsc{Philippon, T. and A.~Reshef} (2012): \enquote{Wages and Human Capital
+  in the U.S. Finance Industry: 1909--2006,} \emph{The Quarterly Journal of
+  Economics}, 127, 1551--1609.
+
+\bibitem[\protect\citeauthoryear{Philippon and Reshef}{Philippon and
+  Reshef}{2013}]{Philippon2013}
+---\hspace{-.1pt}---\hspace{-.1pt}--- (2013): \enquote{An international look at
+  the growth of modern finance,} \emph{Journal of Economic Perspectives}, 27,
+  73--96.
+
+\bibitem[\protect\citeauthoryear{Piketty}{Piketty}{2018}]{Piketty2014}
+\textsc{Piketty, T.} (2018): \emph{{Capital in the 21st Century}}, Routledge.
+
+\bibitem[\protect\citeauthoryear{Piketty and Saez}{Piketty and
+  Saez}{2003}]{piketty:2003}
+\textsc{Piketty, T. and E.~Saez} (2003): \enquote{Income inequality in the
+  United States, 1913--1998,} \emph{The Quarterly Journal of Economics}, 118,
+  1--41.
+
+\bibitem[\protect\citeauthoryear{Powell}{Powell}{2020}]{Powell2020}
+\textsc{Powell, D.} (2020): \enquote{{Quantile Treatment Effects in the
+  Presence of Covariates},} \emph{The Review of Economics and Statistics}, 102,
+  994--1005.
+
+\end{thebibliography}

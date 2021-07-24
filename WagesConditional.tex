@@ -1,0 +1,70 @@
+
+
+
+\textbf{Revise/check details:The preceding graphical analysis suggested  that later generations of American men have to date suffered decreasing incomes compared to their elder peers. This is also true for female high school graduates. But, not for African American or Hispanic women or women who attended college. We now dig deeper, working with individual level data so that we can understand intergenerational differences controlling for a range of determinants. }
+
+%An important limitation of our analysis is that it is not causal, and we work with a repeated cross-section unlike \cite{Guvenen2017} who use panel data and are thus able to control for a broader range of factors. The compensation for this limitation, as previously discussed, is that the CPS data are relatively rich and are representative of the US population.
+In this section we exploit the richness of the CPS data to investigate how these patterns identified in Section~\ref{sec:wages} are related to structural change in the US economy. Specifically, whether or not there remain intergenerational differences in incomes once we allow for the changing sectoral composition of the US labour market, the changing geographical distribution of economic activity, or the increasing returns to education.\footnote{\cite{Acemoglu2011} provide a detailed discussion of the leading models/data.} While for clarity the preceding graphical analysis focused on median earnings, prior work such as \cite{piketty:2003,Gabaix2016} has highlighted the changing shape of the earnings distribution. Others, including \cite{Chetverikov2016}, have documented the uneven impact of secular changes such as increased import competition.\footnote{While our prior focus on median earnings is preferable to mean earnings given the concentration of earnings growth on the top percentiles of the distribution highlighted by \cite{piketty:2003,Gabaix2016}, it is by the same token largely uninformative about the remainder of the (conditional) earnings distribution.}   This raises the question, of whether the trends identified above have affected those in some parts of the distribution more than others. Thus, in this section we broaden our attention to other quantiles of the earnings distribution. 
+
+To do so we use the recent Generalized Quantile Regression estimator of \cite{Powell2020}.
+This allows recovery of the unconditional quantiles such that we can interpret the estimated coefficients for each quantile, $\tau$ as we would for analogous coefficients for the mean from a Least-Squares estimator. 
+Importantly, given we include fixed effects, it allows for the conventional interpretation of our coefficients as within-estimates rather than the more difficult estimates from other quantile regression models for panel data. 
+
+%\subsection{Regression analysis}
+
+We apply this estimator to the following model:
+\begin{equation} \label{eq:wageregs}
+%c^{i}_{j,t}=  \beta^{i}d_{g} + \delta^{g}_{s} + \Gamma^{i}_{s} X_{jt} + \delta^{i}_{t} +d^{i}_{s}+\varepsilon_{j,t}  // what is $\delta_{s}^{g} for 
+%c^{i}_{j,t}= \gamma^{i}_{g} +  X'_{jt}\beta^{i} + \delta^{i}_{t} +\delta^{i}_{s}+\varepsilon^{i}_{j,t}
+Q\left( y_{jt} \mid \tau \right)= \gamma_{g}(\tau) +  \mathbf{X}^{\prime}_{j,t}\beta(\tau) + \delta_{i}\left( \tau \right)+ \delta_{o}\left( \tau \right)+ \delta_{s}(\tau)+\varepsilon_{j,t}(\tau)
+\end{equation}
+
+
+%^\textbf{SHOULD THIS BE WRITTEN (WITH MORE COMPLICATION) AS A STRUCTURAL QUANTILE FUNCTION \cite{Chernozhukov2006,Chernozhukov2008}.}
+. Where $y_{jt}=Y$ is a vector of log wages indexed by individual $j$ and year $t$. $Q\left( y_{jt} \mid \tau \right)\equiv Q_{\tau}(Y)$ is the quantile function of the unconditional distribution of (log) wages. 
+That (\ref{eq:wageregs}) relates changes in the unconditional distribution described by $Q\left( y_{jt} \mid \tau \right)$ to the variables on the RHS is the key advantage of the \cite{Powell2020} estimator.
+Note, as with other quantile regression models, estimated coefficients will describe the change in quantile $\tau$ of the distribution of $y_{jt}$, $Q_{\tau}\left( Y \right)$, rather than the effect on any given individual $j$. We are most interested in the vector of generational dummies $\gamma_{g}(\tau)$, which capture how a given quantile, $\tau$ of the earnings distributions of each generation differ (with respect to the Silent Generation). Likewise, $\beta^{i}(\tau)$ captures the effects of a standard set of educational, demographic, and occupation controls on each part of the distribution. Specifically, we include in $\mathbf{X}_{j,t}$ a quadratic in age, dummies for being African American or Hispanic as well as Female and whether the respondent graduated high school or attended college.
+Moreover we include a full-set of occupation dummies  to capture the impact of changing technologies and the value of human capital, $\delta_{o}\left( \tau \right)$.
+Finally, we include a vector of industry dummies $\delta_{i}\left( \tau \right)$ 
+We also include state fixed effects, $\delta_{s}(\tau)$, to capture persistent differences in local labour markets. $\varepsilon_{j,t}(\tau)$ is a quantile specific disturbance term. We obtain standard errors via the bootstrap. \footnote{\textbf{I think given JHR referees we need to discuss this here}Given how we construct our data, we do not have sufficient variation to include year fixed effects as well as our age and generation controls. Thus, the age coefficients will reflect both age related effects such as human capital accumulation or seniority, and the average shock experienced by members of that generation at that age. Given our focus on cohorts, this does not overly affect our inference.} \footnote{\textbf{Do we want to say OLS results available on request, or in Appendix~\ref{sec:resultsappendix}} or neither.}
+
+Figure~\ref{fig:quantile_reg_gender} plots the results of these regressions estimated separately for men and women for $\tau  \in \left\{ 0.05, 0.1, \dots, 0.95 \right\}$. The results for men make clear that across the distribution we observe declines in real earnings with each subsequent generation. Interestingly, however, the differences between generations are smallest at the extremes of the distribution. One explanation is that the low earnings of the poorest $5\%$ inevitably compress the distribution, while the increasing earnings of the very richest, documented by \cite{Gabaix2016} and others, push up the average earnings of the richest $5\%$. 
+
+The results for women in the right-hand panel reveal interesting differences in fortunes between the top and bottom halves of the distribution. Women below the median have seen substantial income growth with Millennials at the 10th percentile earning $\exp{(0.39)}-1=48\%$ more than their Silent equivalents. Gen X. and Boomer women earn $26\%$ and $19\%$ more respectively. On the other hand, Boomer women out earn their subsequent counterparts by an increasing degree from the median onwards. Although, as with men, there is some convergence  at the $95th$ percentile. This relative growth in the incomes of lower-earning women is consistent with the results from social-security data of \cite{Kopczuk2010} who document a decreasing p50/p20 ratio for women from the 1970s onwards.\footnote{\cite{Kopczuk2010} also present evidence of an increasing p80/p20 ratio -- which we do not observe suggesting that it is captured by our other controls, such as education.}
+
+The picture becomes more nuanced when we also separate by education as well. Looking at Figure~\ref{fig:quantile_reg_educ} we can see that while there has been growth in the lower third of the earnings distribution of female high school graduates, wages for the rest have been stagnant from the Boomers onwards. College educated women have seen more growth, again particularly at the bottom end where some difference between Gen.~X'ers and Millennials is discernable. But, at above median earnings there is less evidence of such a difference although there is still an increase relative to female Boomer college-graduates of around $\exp(0.38)-\exp(0.21)=23.4\%$. Arguably, given the two secular trends of a shrinking gender pay gap  \citep{Goldin2014}, and skills-biased technological change, this number seems small. 
+
+The results for college educated men tell a similar story. Across the distribution, incomes are highest for Gen. X'ers, although they are only one or two percent higher than those of Millennials. The gap with Boomers (and Silents) is largest at the bottom of the distribution where it is around $16.1\%$, although these estimates are less precise. The top $10\%$ of all three generations have experienced  substantial income growth relative to the Silents, consistent with the overall earnings growth of the highest earners. The results for high school graduates mirror those for men as a whole in Figure~\ref{fig:quantile_reg_gender}, with a clear reduction in earnings of each subsequent generation across the distribution.  
+
+\textbf{PRICE OF HUMAN CAPITAL HERE} \cite{Bowlus2012}
+
+Figure~\ref{fig:quantile_reg_race} reports results estimated separately for each of the three largest ethnic and racial groups in our data.\footnote{Sample size limitations preclude analysis of other groups.} The results for Whites again show a clear reduction in earnings across generations. There is some evidence of wage growth amongst the lowest-earning African Americans, particularly for Gen. X'ers. But, any such gains are restricted to the bottom $25\%$. The remainder of the distribution suffered a decline smaller than that of Whites, but given that conditional on age, education, and location, African Americans earned $29\%$ less than Whites in 1950 \citep{Black2013}, this suggests that subsequent generations have seen only a modest reduction in the racial wage gap. Likewise the earnings of Hispanics have seen some growth at the bottom of the distribution, but otherwise the same pattern of reduced earnings for each subsequent generation emerges. For Hispanics however, the magnitude of the coefficients are similar to those for Whites, although there is not the same convergence at the top of the earnings distribution. Perhaps, reflecting that Hispanics are under-represented amongst the highest earners. 
+
+Taken together the results suggest that women and non-Whites in the lowest quantiles have seen some growth in real incomes between generations. But, the majority have experienced declines.  Otherwise the results are consistent with the trends identified above for average earnings. One further interesting phenomenon is that intergenerational differences seem to be smaller amongst the top $5\%$ of each group.
+
+\begin{figure}[ht]
+\caption{Quantile regression results}\label{fig:quantile_reg_gender}
+\includegraphics[width=\linewidth]{Quantile_male_female.pdf}
+\hfill\justifying\footnotesize{\emph{Notes:} Each panel reports the coefficient on the generation dummies from the following quantile regressions estimated separately for men and women:
+\begin{equation*} \label{eq:quantilewageregs}
+    Q\left( y_{jt} \mid \tau \right)= \gamma_{g}(\tau) +  X^{\prime}_{j,t}\beta(\tau) + \delta_{s}(\tau)+\varepsilon_{j,t}(\tau)
+\end{equation*}
+Where $Q\left( y_{jt} \mid \tau \right)$ is the $\tau^{th}$ quantile of the unconditional distribution of log wages, $y_jt$ in which $j$ and $t$ index individuals and year respectively.
+$\gamma_{g}(\tau)$ is the vector of generational dummies, the coefficients of which are plotted above, with the base generation being the Silent generation. $X^{\prime}_{j,t}\beta(\tau)$ is number of controls including, individual controls, and industry controls. $\delta_{s}(\tau)$ is state fixed effects. The dashed lines are the corresponding $95\%$ confidence interval. Data are from the CPS, our core regression sample as constructed in Appendix~\ref{sec:data_appendix}.} 
+%\emph{Source:} Current Population Survey (CPS) \\
+\end{figure}
+
+
+\begin{figure}[ht]
+\caption{Quantile regression results}\label{fig:quantile_reg_educ}
+\includegraphics[width=\linewidth]{Quantile_gender_educ.pdf}
+\subcaption*{\emph{Notes:} Results are for separate quantile regressions, for men and women with highschool or college educations respectively. Other details as for Figure~\ref{fig:quantile_reg_gender}.}
+\end{figure}
+
+\begin{figure}[ht]
+\caption{Quantile regression results}\label{fig:quantile_reg_race}
+\includegraphics[width=\linewidth]{Quantile_wh_bl_hi.pdf}
+\subcaption*{\emph{Notes:} Results are for separate quantile regressions for Black, Hispanic, and White Americans. Other details as for Figure~\ref{fig:quantile_reg_gender}.}
+\end{figure}
+
+\textbf{Do we need QR model with generation $\times$ industry here??}

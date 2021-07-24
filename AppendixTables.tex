@@ -1,0 +1,153 @@
+\subsection{Full regression tables}\label{full_reg_app}
+
+\begin{table}[h!]
+\scalebox{0.65}{
+\begin{threeparttable}
+\caption{Generational differences in real wages by industry: Unconditional results\label{tab:wages_ind_nox_nofe}}
+\estauto{indreg_uncond_wage_feb21.tex}{9}{c}
+\begin{tablenotes}{ \item \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), excluding covariates and fixed effects. The dependent variable is log wages. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g}  +\varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.65}{
+\begin{threeparttable}
+\caption{Generational differences in real wages by industry: Including covariates\label{tab:wages_ind_x}} 
+\estauto{indreg_cov_wages_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), including covariates but not fixed effects. The dependent variable is log wages. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}  + \varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. $X$ contains education, race, gender, and age variables. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Generational differences in real wages by industry: Including covariates and occupation controls \label{tab:wages_ind_x_occ}} 
+\estauto{indreg_cov_wages_plusocc_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), including covariates but not fixed effects. The dependent variable is log wages. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i} + \varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. $X$ contains education, race, gender, and age variables. The reference occupation group is Managerial \& Professional Speciality. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Generational differences in real wages by industry: Including covariates and state fixed effects\label{tab:wages_ind_x_fe}} 
+\estauto{indreg_cov_wages_fe_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), including covariates but not fixed effects. The dependent variable is log wages. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}  +\delta^{i}_{s} + \varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation and omitted occupation group is Managerial \& Professional Speciality. $X$ contains education, race, gender, and age variables. Standard  errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+%%%%%%%%
+\begin{table}[h!]
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Generational differences in labour share by industry: Unconditional results\label{tab:labshare_ind_nox_nofe}}  
+\estauto{indreg_uncond_lb_feb21.tex}{9}{c}
+\begin{tablenotes}{ \item \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), excluding covariates and fixed effects. The dependent variable is the labour share of value added. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g}  +\varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+
+
+\begin{table}[h!]\centering
+\scalebox{0.65}{
+\begin{threeparttable}
+\caption{Generational differences in labour share by industry: Including covariates\label{tab:lb_ind_x}} 
+\estauto{indreg_cov_lb_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), including covariates but not fixed effects. The dependent variable is the labour share of value added. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}   + \varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. $X$ contains education, race, gender, and age variables. Standard errors are in Parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Generational differences in labour share by industry: Including covariates and occupation fixed effects\label{tab:lb_ind_x_occ}} 
+\estauto{indreg_cov_lb_plusocc_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), including covariates and occupation fixed effects. The dependent variable is the labour share of value added. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}  + \varepsilon^{i}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation and Managerial \& Professional Speciality. $X$ contains education, race, gender, and age variables. Standard errors are in Parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Generational differences in labour share by industry: Including covariates and state fixed effects\label{tab:lb_ind_x_fe}} 
+\estauto{indreg_cov_fe_lb_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}), including covariates and state fixed effects. The dependent variable is the labour share of value added. The specification estimated is: $\log w^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}  +\delta^{i}_{s} + \varepsilon^{i}_{j,t}$. $\varepsilon^{i}_{j,t}$ is clustered by state. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation. $X$ contains education, race, gender, and age variables. Standard errors are in parentheis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.}\end{tablenotes} 
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.5}{
+\begin{threeparttable}
+\caption{Wage regressions by generation\label{tab:wages_gen_x_nofe}}
+\estauto{genreg_wage_feb21.tex}{13}{c}
+\Fignote{This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries and disaggregating instead by industry, including  covariates but not fixed effects. The dependent variable is log wages. The specification estimated is: $\log w^{g}_{j,t}= X'_{j,t}\beta^{g} + \varepsilon^{g}_{j,t}$. The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation, retail industry and Managerial \& Professional Speciality. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level. } 
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.5}{
+\begin{threeparttable}
+\caption{Wage regressions by generation with state fixed effects\label{tab:wages_gen_x_fe}}
+\estauto{genreg_wage_fe_feb21.tex}{13}{c}
+\Fignote{This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries and disaggregating instead by industry, including  covariates but not fixed effects. The dependent variable is log wages.  The specification estimated is: $\log w^{g}_{j,t}= X'_{j,t}\beta^{g} + \varepsilon^{g}_{j,t}$. $\varepsilon^{g}_{j,t}$ are clustered by state.  The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation, retail industry and the Managerial \& Speciality occupation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.5}{
+\begin{threeparttable}
+\caption{Labour share regressions by generation\label{tab:lb_gen_x_nofe}}
+\estauto{genreg_LB_feb21.tex}{13}{c} 
+\Fignote{This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries and disaggregating instead by industry, including  covariates but not fixed effects. The dependent variable is the labour share of value added.  The specification estimated is: $\log w^{g}_{j,t}= X'_{j,t}\beta^{g} + \varepsilon^{g}_{j,t}$.  The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation, retail industry and the Managerial \& Speciality occupation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.5}{
+\begin{threeparttable}
+\caption{Labour share regressions by generation with fixed effects\label{tab:lb_gen_x_fe}}
+\estauto{genreg_lb_FE_feb21.tex}{13}{c}
+\Fignote{This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries and disaggregating instead by industry, including  covariates and  state fixed effects. The dependent variable is the labour share of value added.  The specification estimated is: $\log w^{g}_{j,t}= X'_{j,t}\beta^{g} + \delta_{s}+ \varepsilon^{g}_{j,t}$. $\varepsilon^{g}_{j,t}$ are clustered by state.  The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation, retail industry and the Managerial \& Speciality occupation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Generational differences in wage and the labour share: Pooled estimates\label{tab:pooled_nofe}}
+\estauto{pooledreg_wage_lb_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries, including  covariates but not  fixed effects.  The specification estimated is: $c^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i} +\varepsilon^{i}_{j,t}$. Where $c^{i}_{j,t}$, the dependent variable, is the log wage in Columns~(1)~to~(3) and the labour share of value added in Columns~(4)~to~(6). The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation, Retail Industry and the Managerial \& Speciality occupation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+
+\begin{table}[h!]\centering
+\scalebox{0.6}{
+\begin{threeparttable}
+\caption{Wage and labour share regressions: Pooled estimates with state fixed effects}
+\estauto{pooledreg_wage_lb_fe_feb21.tex}{9}{c}
+\begin{tablenotes}{\item  \emph{Notes:} This table presents estimates of Equation~(\ref{eq:wageregs}) but pooling across industries, including  covariates and fixed effects.  The specification estimated is: $c^{i}_{j,t}= \gamma^{i}_{g} + X'_{j,t}\beta^{i}  +\delta_{s}  + \varepsilon^{i}_{j,t}$. Where $c^{i}_{j,t}$, the dependent variable, is the log wage in Columns~(1)~to~(3) and the labour share of value added in Columns~(4)~to~(6). The data from the CPS and BEA are merged at the state geographic level and one-digit industry code as described in Appendix~\ref{sec:data_appendix}. The generation variables are all dummy variables defined on the basis of date of birth, as per Table~\ref{cohortdef}. The omitted category is the Silent Generation, Retail Industry and the Managerial \& Speciality occupation. Standard errors are in parenthesis. $^{***}$ Significant at the $1\%$ level.$^{**}$ Significant at the $5\%$ level. $^{*}$ Significant at the $10\%$ level.} 
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{table}
+%%
